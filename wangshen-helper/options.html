@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>网申助手 · 我的资料</title>
+<link rel="icon" href="icons/icon32.png">
+<style>
+  :root { --blue:#2563eb; --ink:#111827; --sub:#6b7280; --line:#e5e7eb; --bg:#f6f7f9; --ok:#16a34a; --bad:#dc2626; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:14px/1.55 -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+  .bar { position:sticky; top:0; z-index:5; background:#fff; border-bottom:1px solid var(--line); }
+  .bar .in { max-width:980px; margin:0 auto; padding:10px 20px; display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .bar img { width:26px; height:26px; }
+  .bar h1 { font-size:16px; margin:0 8px 0 0; }
+  .bar nav { display:flex; gap:2px; flex-wrap:wrap; flex-basis:100%; margin:-4px 0 -2px 26px; }
+  .bar nav a { color:#374151; text-decoration:none; padding:4px 8px; border-radius:6px; font-size:13px; }
+  .bar nav a:hover { background:#f3f4f6; }
+  .bar .act { margin-left:auto; display:flex; gap:8px; align-items:center; }
+  #status { font-size:13px; color:var(--sub); }
+  button { font:inherit; cursor:pointer; border-radius:8px; border:1px solid var(--line); background:#fff; padding:6px 12px; color:var(--ink); }
+  button:hover { background:#f9fafb; }
+  button.primary { background:var(--blue); border-color:var(--blue); color:#fff; font-weight:600; }
+  button.primary:hover { background:#1d4ed8; }
+  button.link { border:none; background:none; color:var(--blue); padding:2px 6px; }
+  button.danger { color:var(--bad); }
+  main { max-width:980px; margin:0 auto; padding:20px; }
+  section { background:#fff; border:1px solid var(--line); border-radius:12px; padding:16px 18px; margin-bottom:16px; scroll-margin-top:100px; }
+  section > h2 { font-size:15px; margin:0 0 12px; display:flex; align-items:center; gap:8px; }
+  section > h2 small { font-weight:400; color:var(--sub); font-size:12px; }
+  .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap:10px 16px; }
+  .f { display:flex; flex-direction:column; gap:3px; }
+  .f.wide { grid-column: 1 / -1; }
+  .f label { font-size:12px; color:var(--sub); }
+  .f input, .f textarea { font:inherit; border:1px solid #d1d5db; border-radius:7px; padding:6px 9px; width:100%; background:#fff; color:var(--ink); }
+  .f textarea { min-height:84px; resize:vertical; }
+  .f input:focus, .f textarea:focus { outline:2px solid #bfdbfe; border-color:var(--blue); }
+  .f .warn { font-size:12px; color:#b45309; }
+  .card { border:1px solid var(--line); border-radius:10px; padding:12px; margin-bottom:10px; background:#fcfcfd; }
+  .card .head { display:flex; align-items:center; gap:6px; margin-bottom:8px; font-weight:600; font-size:13px; }
+  .card .head span { flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .files { display:grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap:12px; }
+  .slot { border:1px dashed #cbd5e1; border-radius:10px; padding:12px; display:flex; flex-direction:column; gap:6px; }
+  .slot b { font-size:13px; }
+  .slot .name { font-size:12px; color:var(--sub); word-break:break-all; min-height:18px; }
+  .slot img { max-width:80px; max-height:100px; border-radius:4px; border:1px solid var(--line); }
+  #json { width:100%; min-height:420px; font:12px/1.5 ui-monospace, Menlo, Consolas, monospace; border:1px solid #d1d5db; border-radius:8px; padding:10px; }
+  .row { display:flex; gap:8px; flex-wrap:wrap; margin-top:10px; }
+  .note { font-size:12px; color:var(--sub); margin:0 0 10px; }
+</style>
+</head>
+<body>
+<div class="bar"><div class="in">
+  <img src="icons/icon48.png" alt=""><h1>我的资料</h1>
+  <div class="act"><span id="status"></span><button id="save" class="primary">保存</button></div>
+  <nav id="nav"></nav>
+</div></div>
+<main>
+  <p class="note">这里的资料只保存在你这台电脑的浏览器里。日期写成 2025-09 或 2025-09-01；多条经历按时间从早到晚排列（网申表通常也是这个顺序）。改完记得点右上角“保存”。</p>
+  <div id="form"></div>
+
+  <section id="sec-files">
+    <h2>附件 <small>点“上传附件”时，按上传框旁边的文字自动对应</small></h2>
+    <div class="files" id="files"></div>
+  </section>
+
+  <section id="sec-json">
+    <h2>高级：直接编辑 / 导入导出 <small>可以把整份资料备份成文件，换电脑时导入</small></h2>
+    <textarea id="json" spellcheck="false"></textarea>
+    <div class="row">
+      <button id="applyJson">应用上面的 JSON</button>
+      <button id="export">导出资料文件</button>
+      <button id="importBtn">导入资料文件</button><input type="file" id="importFile" accept=".json,application/json" hidden>
+      <button id="reset" class="danger">恢复为初始资料</button>
+    </div>
+  </section>
+</main>
+<script src="profile-merge.js"></script>
+<script src="options.js"></script>
+</body>
+</html>

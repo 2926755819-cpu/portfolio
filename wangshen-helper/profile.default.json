@@ -1,0 +1,184 @@
+{
+ "_说明": "网申助手个人信息库。日期写 YYYY-MM 或 YYYY-MM-DD；数组按时间从早到晚排列。身份证号插件不会自动填写，只能本人在网页上填。下拉框可以写多个备选，用 | 分开，按顺序选第一个有的；最后写 * 表示都没有时选第一个选项。“自定义问答”用来回答各公司特有的题目：标签里包含“题目”文字，就填“答案”。",
+ "basic": {
+  "name": "",
+  "gender": "",
+  "birth": "",
+  "nation": "",
+  "marital": "",
+  "political": "",
+  "nativePlace": "",
+  "hukou": "",
+  "hukouType": "",
+  "sourceProvince": "",
+  "height": "",
+  "weight": "",
+  "phone": "",
+  "email": "",
+  "address": "",
+  "city": "",
+  "emergencyName": "",
+  "emergencyRelation": "",
+  "emergencyPhone": "",
+  "health": "",
+  "medicalHistory": "",
+  "graduateType": "",
+  "graduateYear": "",
+  "expectedCity": "",
+  "expectedSalary": "",
+  "availableDate": "",
+  "acceptAdjust": "",
+  "hobbies": "",
+  "source": "",
+  "idNumber": "",
+  "partyDate": ""
+ },
+ "declarations": {
+  "relativesInCompany": "",
+  "badRecord": "",
+  "nonCompete": "",
+  "sideBusiness": "",
+  "foreignNationality": "",
+  "acceptOverseas": "",
+  "overseasDuration": ""
+ },
+ "education": [
+  {
+   "level": "本科",
+   "school": "",
+   "major": "",
+   "start": "",
+   "end": "",
+   "degree": "",
+   "discipline": "",
+   "studyForm": "",
+   "training": "",
+   "rank": "",
+   "unified": "",
+   "overseas": "",
+   "country": "",
+   "gpa": "",
+   "note": "",
+   "courses": "",
+   "college": "",
+   "advisor": "",
+   "research": "",
+   "schoolCity": "",
+   "avgScore": ""
+  },
+  {
+   "level": "硕士研究生",
+   "school": "",
+   "schoolEn": "",
+   "major": "",
+   "majorEn": "",
+   "start": "",
+   "end": "",
+   "degree": "",
+   "discipline": "",
+   "studyForm": "",
+   "training": "",
+   "rank": "",
+   "unified": "",
+   "overseas": "",
+   "country": "",
+   "courses": "",
+   "college": "",
+   "advisor": "",
+   "research": "",
+   "schoolCity": ""
+  }
+ ],
+ "internships": [
+  {
+   "company": "",
+   "dept": "",
+   "title": "",
+   "start": "",
+   "end": "",
+   "desc": "",
+   "leaveReason": "",
+   "companyType": "",
+   "companySize": ""
+  }
+ ],
+ "projects": [
+  {
+   "name": "",
+   "role": "",
+   "org": "",
+   "start": "",
+   "end": "",
+   "desc": ""
+  }
+ ],
+ "campus": [
+  {
+   "org": "",
+   "title": "",
+   "start": "",
+   "end": "",
+   "desc": "",
+   "level": ""
+  }
+ ],
+ "awards": [
+  {
+   "name": "",
+   "date": "",
+   "level": "",
+   "desc": ""
+  }
+ ],
+ "languages": [
+  {
+   "language": "",
+   "level": "",
+   "exam": "",
+   "score": "",
+   "detail": "",
+   "date": "",
+   "number": ""
+  }
+ ],
+ "certificates": [
+  {
+   "name": "",
+   "date": "",
+   "expire": "",
+   "number": "",
+   "org": ""
+  }
+ ],
+ "family": [
+  {
+   "relation": "",
+   "name": "",
+   "political": "",
+   "work": "",
+   "position": "",
+   "phone": "",
+   "age": ""
+  }
+ ],
+ "texts": {
+  "selfIntro": "",
+  "applyReason": "",
+  "strengths": "",
+  "awardsSummary": "",
+  "companyExpectation": ""
+ },
+ "custom": [
+  {
+   "q": "（示例）期望面试城市",
+   "a": "（示例）青岛|上海|*"
+  },
+  {
+   "q": "微信号",
+   "a": "{phone}"
+  }
+ ],
+ "settings": {
+  "highSchool": "自动"
+ }
+}

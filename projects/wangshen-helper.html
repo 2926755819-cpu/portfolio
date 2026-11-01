@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>网申助手 · 李昌昊作品集</title>
+<meta name="description" content="网申助手：把反复手填网申的麻烦做成浏览器插件：AI 调用插件填写，本人只做核对与提交；3 天迭代 15 个以上版本，适配 7 类招聘系统，已用于 13 个岗位的正式投递。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="网申助手 · 李昌昊作品集">
+<meta property="og:description" content="网申助手：把反复手填网申的麻烦做成浏览器插件：AI 调用插件填写，本人只做核对与提交；3 天迭代 15 个以上版本，适配 7 类招聘系统，已用于 13 个岗位的正式投递。">
+<meta property="og:url" content="https://2926755819-cpu.github.io/portfolio/projects/wangshen-helper.html">
+<meta property="og:image" content="https://2926755819-cpu.github.io/portfolio/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../assets/fonts/display-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="../assets/js/main.js" defer></script>
+</head>
+<body id="top">
+<a class="skip" href="#main">跳到正文</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="../index.html" aria-label="Li Changhao 首页">Li Changhao</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><span class="menu-label">菜单</span><span class="plus" aria-hidden="true">＋</span></button>
+    <nav class="nav" id="site-nav" aria-label="主导航"><a href="../works.html" aria-current=page><span>作品</span><span class="nav-en">01 / WORKS</span></a><a href="../about.html"><span>关于</span><span class="nav-en">02 / ABOUT</span></a><a href="../contact.html"><span>联系</span><span class="nav-en">03 / CONTACT</span></a></nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="d-head">
+    <div class="wrap">
+      <p class="crumb tag"><a href="../index.html">首页</a><span aria-hidden="true">/</span><a href="../works.html">作品</a><span aria-hidden="true">/</span><span aria-current="page">网申助手</span></p>
+      <p class="tag accent">AI 产品 / AGENT</p>
+      <h1 class="d-title">网申助手</h1>
+      <p class="d-sub">校招网申自动填写 · 浏览器插件</p>
+      <dl class="infobar">
+        <div><dt>类别 / TYPE</dt><dd>AI 产品 · 浏览器插件</dd></div>
+        <div><dt>时间 / DATE</dt><dd>2026.10–至今<br><span class="dd-s"><span class="dot live" aria-hidden="true"></span>持续迭代</span></dd></div>
+        <div><dt>角色 / ROLE</dt><dd>本人主导</dd></div>
+        <div><dt>合作者 / WITH</dt><dd>Claude（AI 协作开发）</dd></div>
+      </dl>
+      <p class="lede sm d-overview">一份资料库适配各家招聘系统：AI 助手调用插件完成填写，我只做核对与提交。</p>
+    </div>
+  </section>
+  <div class="d-cover"><div class="wrap"><div class="frame mock" role="img" aria-label="网申助手示意图：插件把示例资料填进网申表单，证件号留给本人填写"><div class="mock-win" aria-hidden="true">
+  <div class="mock-bar"><i></i><i></i><i></i><span>campus.example.com/apply</span></div>
+  <div class="mock-body">
+    <p class="mock-h">基本信息</p>
+    <div class="mock-row ok"><span>姓名</span><b>张三</b></div>
+    <div class="mock-row ok"><span>毕业院校</span><b>示例大学</b></div>
+    <div class="mock-row ok"><span>专业</span><b>城市规划</b></div>
+    <div class="mock-row ok"><span>出生年月</span><b>2003-05</b></div>
+    <div class="mock-row todo"><span>证件号码</span><b>本人填写</b></div>
+    <div class="mock-pop">
+      <p class="mock-pop-t">网申助手</p>
+      <span class="mock-btn">一键填写</span>
+      <p class="mock-stat"><i>✓</i>已填写 4 项</p>
+      <p class="mock-stat warn"><i>!</i>1 项留给本人</p>
+    </div>
+  </div>
+</div></div></div></div>
+  <section class="d-sec" aria-labelledby="s1">
+    <div class="wrap sec-grid">
+      <div class="sec-side reveal"><span class="d-no" aria-hidden="true">01</span><h2 class="sec-title" id="s1">问题 / PROBLEM</h2></div>
+      <div class="sec-main reveal"><h3 class="d-h">同一份简历，要在每家网申系统里重填一遍。</h3><p class="d-body">秋招投递时，北森、hotjob、前程无忧、国聘等招聘系统的表单各不相同，同一份简历要反复手填。</p><p class="d-body">我先把问题拆开：梳理出约 100 个常见字段和 20 余种表单控件，比如日期面板、虚拟滚动列表、省市联动。这些控件正是手填最耗时、也最容易出错的地方。</p><div class="stats" style="--n:3"><div><span class="stat-num">约 100</span><span class="stat-label">个常见字段</span></div><div><span class="stat-num">20+</span><span class="stat-label">种表单控件</span></div><div><span class="stat-num">7 类</span><span class="stat-label">招聘系统已适配</span></div></div></div>
+    </div>
+  </section>
+  <section class="d-sec" aria-labelledby="s2">
+    <div class="wrap sec-grid">
+      <div class="sec-side reveal"><span class="d-no" aria-hidden="true">02</span><h2 class="sec-title" id="s2">方案与人机分工 / DESIGN</h2></div>
+      <div class="sec-main reveal"><h3 class="d-h">规则识别为主、AI 处理例外、人工确认提交。</h3><p class="d-body">一份个人资料库加一份自定义问答库，适配各家招聘系统。插件按标签文字识别字段并填写，识别不了的交给 AI 补漏；登录、验证码、证件号和最终提交，始终留给本人。</p><ol class="flow" aria-label="工作流程"><li><span class="who">AI</span><b>选岗</b></li><li><span class="who">插件</span><b>填写</b></li><li><span class="who">AI</span><b>补漏</b></li><li class=me><span class="who">本人</span><b>核对提交</b></li></ol><div class="split"><div><h4>交给插件和 AI</h4><ul><li>识别并填写输入框、下拉框、日期面板、单选 / 多选、省市联动</li><li>按“照片 / 简历 / 成绩单”等标签上传附件</li><li>按“题目关键词 → 答案”填写各公司特有的问题</li><li>填完列出哪些字段没填上，方便补漏</li></ul></div><div class=me><h4>留给本人</h4><ul><li>登录与验证码</li><li>证件号</li><li>最后的“提交 / 投递”</li><li>提交前逐项核对</li></ul></div></div><p class="d-note">个人资料只保存在本机浏览器里，插件不向任何服务器发送数据。</p></div>
+    </div>
+  </section>
+  <section class="d-sec" aria-labelledby="s3">
+    <div class="wrap sec-grid">
+      <div class="sec-side reveal"><span class="d-no" aria-hidden="true">03</span><h2 class="sec-title" id="s3">Agent 接口 / AGENT API</h2></div>
+      <div class="sec-main reveal"><h3 class="d-h">让 AI 助手直接调用插件，并读回结果。</h3><p class="d-body">我设计了网页内的调用接口：AI 助手可以直接触发填写、上传和重新加载，并读回结构化结果，也就是哪些字段已填、哪些失败。这样就不用再人工复制诊断信息，“发现问题—修复”的往返也更短。</p><div class="api"><div><code>window.wszs.fill()</code><span>填写当前页面，返回已填字段与失败字段</span></div><div><code>window.wszs.upload()</code><span>按标签上传照片、简历等附件</span></div><div><code>window.wszs.reload()</code><span>重新加载</span></div><div><code>window.wszs.ping()</code><span>检查插件是否在线</span></div></div></div>
+    </div>
+  </section>
+  <section class="d-sec" aria-labelledby="s4">
+    <div class="wrap sec-grid">
+      <div class="sec-side reveal"><span class="d-no" aria-hidden="true">04</span><h2 class="sec-title" id="s4">迭代与数据 / ITERATION</h2></div>
+      <div class="sec-main reveal"><h3 class="d-h">在真实网申里逐家测试，3 天迭代 15 个以上版本。</h3><p class="d-body">按“发现—修复—回归测试”的闭环推进：每次发布前在 12 个模拟页面上跑回归测试，同时维护问题与版本记录。</p><div class="stats" style="--n:4"><div><span class="stat-num">15+</span><span class="stat-label">个版本 / 3 天</span></div><div><span class="stat-num">12</span><span class="stat-label">个模拟页面做回归测试</span></div><div><span class="stat-num">52%</span><span class="stat-label">AI 用量来自浏览器操作</span></div><div><span class="stat-num">13</span><span class="stat-label">个岗位正式投递</span></div></div><p class="d-body">统计 AI 协作用量后发现，对话上下文过长是主要成本，浏览器操作占 52%，于是改为分批会话、合并操作。选岗时，用 AI 从 1.1 万条校招汇总数据中按城市、方向筛选岗位并排出优先级。</p><p class="d-body">目前已用于中远海运、中国电信、北京城建等企业 13 个岗位的正式投递。</p><table class="tbl"><caption class="tag">已适配的招聘系统（据开源版说明文档）</caption><thead><tr><th scope="col">系统</th><th scope="col">情况</th></tr></thead><tbody><tr><td>北森（zhiye.com 及定制域名）</td><td class="s-ok">支持</td></tr><tr><td>hotjob 电脑版（Wecruit）</td><td class="s-ok">支持</td></tr><tr><td>前程无忧 51job（传统表格、wt 系统、CRMS）</td><td class="s-ok">支持</td></tr><tr><td>Ant Design / Element 等组件库做的自建系统</td><td class="s-ok">支持</td></tr><tr><td>国聘 iguopin（展示页 + 分块编辑）</td><td class="s-part">部分支持</td></tr><tr><td>hotjob 移动版</td><td class="s-no">暂不支持</td></tr></tbody></table></div>
+    </div>
+  </section>
+  <section class="d-sec" aria-labelledby="s5">
+    <div class="wrap sec-grid">
+      <div class="sec-side reveal"><span class="d-no" aria-hidden="true">05</span><h2 class="sec-title" id="s5">演示 / DEMO</h2></div>
+      <div class="sec-main reveal"><h3 class="d-h">点一下，填好能识别的格子。</h3><div class="figs one"><figure class="fig"><img src="../assets/works/wangshen-demo.gif" width="900" height="600" loading="lazy" decoding="async" alt="一键填写演示：模拟网申页面，资料为虚构的“张三”"><figcaption class="tag">一键填写演示：模拟网申页面，资料为虚构的“张三”</figcaption></figure></div></div>
+    </div>
+  </section>
+  <section class="d-sec" aria-labelledby="s6">
+    <div class="wrap sec-grid">
+      <div class="sec-side reveal"><span class="d-no" aria-hidden="true">06</span><h2 class="sec-title" id="s6">开源 / OPEN SOURCE</h2></div>
+      <div class="sec-main reveal"><h3 class="d-h">去除个人信息的开源版本。</h3><p class="d-body">开源版本自带的资料模板是空白的，不含任何真实个人信息；安装方法和已适配的系统写在说明文档里。</p><p class="d-body">这个项目由我担任产品负责人，与 AI（Claude）协作完成需求定义、开发、测试和迭代；过程中产出了需求说明、问题与版本记录和回归测试集。</p><div class="cta-row"><a class="btn" href="https://github.com/2926755819-cpu/portfolio/tree/main/wangshen-helper" rel="noopener" data-github-plugin>在 GitHub 查看源码 <span class="arrow ne" aria-hidden="true">↗</span></a></div></div>
+    </div>
+  </section>
+  <nav class="d-next" aria-label="下一个作品">
+    <div class="wrap"><a class="all-link" href="edible-community.html"><span><span class="tag">下一个作品 / NEXT</span><span class="t">The Edible Community</span></span><span class="arrow se" aria-hidden="true">↘</span></a></div>
+  </nav>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand"><a class="logo" href="../index.html">Li Changhao</a><p>李昌昊 · 环境设计 + 建筑与城市化，求职 AI 产品 / 产品运营。</p></div>
+      <div class="foot-col"><h2>继续了解 / EXPLORE</h2><ul>
+        <li><a href="../resume.html">完整简历 <span class="arrow ne" aria-hidden="true">↗</span></a></li>
+        <li><a href="https://github.com/2926755819-cpu" rel="noopener" data-github>GitHub <span class="arrow ne" aria-hidden="true">↗</span></a></li>
+      </ul></div>
+      <div class="foot-col"><h2>导航 / NAVIGATION</h2><ul>
+        <li><a href="../index.html">首页</a></li>
+        <li><a href="../works.html">作品</a></li>
+        <li><a href="../about.html">关于</a></li>
+        <li><a href="../contact.html">联系</a></li>
+      </ul></div>
+      <a class="to-top" href="#top">回到顶部 <span class="arrow up" aria-hidden="true">↑</span></a>
+    </div>
+    <div class="foot-bottom"><span class="tag">© 2026 李昌昊 Li Changhao</span><span class="tag">QINGDAO · MANCHESTER</span></div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>网申助手</title>
+<style>
+  :root { --blue:#2563eb; --ink:#111827; --sub:#6b7280; --line:#e5e7eb; --ok:#16a34a; --bad:#dc2626; }
+  * { box-sizing: border-box; }
+  body { width: 340px; margin: 0; font: 13px/1.5 -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; color: var(--ink); background:#fff; }
+  header { display:flex; align-items:center; gap:8px; padding:12px 14px; border-bottom:1px solid var(--line); }
+  header img { width:22px; height:22px; }
+  header b { font-size:14px; }
+  header span { margin-left:auto; color:var(--sub); font-size:12px; }
+  main { padding:12px 14px 14px; }
+  button { font: inherit; cursor:pointer; border-radius:8px; border:1px solid var(--line); background:#fff; padding:7px 10px; }
+  button:hover { background:#f9fafb; }
+  button.primary { width:100%; background:var(--blue); color:#fff; border-color:var(--blue); font-size:14px; padding:10px; font-weight:600; }
+  button.primary:hover { background:#1d4ed8; }
+  button:disabled { opacity:.6; cursor:default; }
+  .row { display:flex; gap:8px; margin-top:8px; }
+  .row button { flex:1; }
+  .opts { margin:10px 0 2px; display:grid; gap:4px; }
+  .opts label { display:flex; gap:6px; align-items:center; color:#374151; }
+  #out { margin-top:12px; border-top:1px solid var(--line); padding-top:10px; max-height:300px; overflow:auto; }
+  #out:empty { display:none; }
+  .sum { font-weight:600; margin-bottom:6px; }
+  .ok { color:var(--ok); } .bad { color:var(--bad); } .sub { color:var(--sub); }
+  details { margin-top:6px; } summary { cursor:pointer; color:#374151; }
+  ul { margin:4px 0 0; padding-left:18px; } li { margin:1px 0; word-break:break-all; }
+  .tip { margin-top:10px; font-size:12px; color:var(--sub); }
+</style>
+</head>
+<body>
+<header><img src="icons/icon48.png" alt=""><b>网申助手</b><span id="who"></span></header>
+<main>
+  <button id="fill" class="primary">填写本页</button>
+  <div class="opts">
+    <label><input type="checkbox" id="overwrite"> 覆盖已经有内容的格子</label>
+    <label><input type="checkbox" id="addEntries" checked> 经历条数不够时自动点“添加”</label>
+  </div>
+  <div class="row">
+    <button id="upload">上传附件</button>
+    <button id="clear">清除颜色</button>
+    <button id="settings">设置</button>
+  </div>
+  <div id="out"></div>
+  <div class="tip">绿框＝已填，红框＝没填上。只填写不提交，请逐项核对后自己点保存/投递。</div>
+</main>
+<script src="profile-merge.js"></script>
+<script src="runner.js"></script>
+<script src="popup.js"></script>
+</body>
+</html>
