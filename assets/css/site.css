@@ -143,14 +143,25 @@ a:hover .arrow.up, a:focus-visible .arrow.up { transform: translateY(-4px); }
 .ring { fill: none; stroke: rgba(21, 21, 19, .34); stroke-width: 1; }
 .node { fill: var(--ink); }
 .glass { stroke: rgba(255, 255, 255, .95); stroke-width: 1.2; }
-.oc .lift { filter: drop-shadow(0 18px 22px rgba(40, 32, 20, .12)); transition: transform .5s var(--ease); }
-.oc:hover .lift, .oc:focus-visible .lift { transform: translateY(-6px); }
+.glass-edge { fill: none; stroke: rgba(40, 32, 20, .1); stroke-width: 2.6; }
+.oc .lift { transition: transform .5s var(--ease), filter .4s; }
+.oc:hover .lift, .oc:focus-visible .lift { transform: translateY(-6px); filter: drop-shadow(0 16px 20px rgba(40, 32, 20, .16)); }
 .oc:focus-visible { outline: none; }
 .oc:focus-visible .glass { stroke: var(--ink); stroke-width: 1.6; }
 .oc-t { font-family: var(--sans); font-weight: 700; fill: var(--ink); }
 .oc-s { font-family: var(--sans); fill: var(--sub); }
 .oc-c, .oc-m { font-family: var(--sans); font-weight: 600; fill: var(--ink); }
 .oc-m { letter-spacing: .08em; }
+.oc { cursor: pointer; }
+.orbit > svg { cursor: grab; touch-action: pan-y; -webkit-user-select: none; user-select: none; }
+.orbit > svg.dragging { cursor: grabbing; }
+.orbit > svg.dragging .lift { transform: none; }
+/* 暂停 / 继续旋转（由 orbit.js 加上） */
+.orbit-toggle { position: absolute; z-index: 3; left: 93%; top: 52%; display: grid; place-items: center; width: 40px; height: 40px; margin: -20px 0 0 -20px; padding: 0; border: 1px solid rgba(255, 255, 255, .95); border-radius: 50%; background: rgba(255, 255, 255, .62); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); box-shadow: 0 10px 22px -12px rgba(40, 32, 20, .4); cursor: pointer; }
+.orbit-toggle::before { content: ""; width: 10px; height: 12px; background: linear-gradient(90deg, var(--ink) 0 3px, transparent 3px 7px, var(--ink) 7px); }
+.orbit-toggle[aria-pressed="true"]::before { margin-left: 3px; background: var(--ink); clip-path: polygon(0 0, 100% 50%, 0 100%); }
+.orbit-toggle[hidden] { display: none; }
+@media (max-width: 640px) { .orbit-toggle { left: auto; top: auto; right: 12px; bottom: 12px; width: 36px; height: 36px; margin: 0; } }
 
 /* 左右浮动卡片、旋转徽章、底部两句话 */
 .float { position: absolute; z-index: 7; width: 230px; padding: 20px 20px 18px; border: 1px solid rgba(255, 255, 255, .9); border-radius: 26px; background: rgba(255, 255, 255, .72); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: var(--shadow); transition: transform .45s var(--ease), box-shadow .45s; }
