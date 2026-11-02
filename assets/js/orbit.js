@@ -118,7 +118,10 @@
       }
       o.a.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') { st.hover++; } });
       o.a.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') { st.hover = Math.max(0, st.hover - 1); } });
-      o.a.addEventListener('focus', function () { st.focus = true; snapTo(k); });
+      o.a.addEventListener('focus', function () {
+        st.focus = true;
+        if (!o.a.matches || o.a.matches(':focus-visible')) snapTo(k);   // 只有键盘选中才转到正前方
+      });
       o.a.addEventListener('blur', function () { st.focus = false; });
       return o;
     });
@@ -267,6 +270,8 @@
     svg.addEventListener('pointerup', release);
     svg.addEventListener('pointercancel', release);
     svg.addEventListener('dragstart', function (e) { e.preventDefault(); });
+    // 鼠标按下不让卡片获得焦点：否则浏览器会画焦点框，还会触发“转到正前方”。点击照样能打开链接
+    svg.addEventListener('mousedown', function (e) { e.preventDefault(); });
     svg.addEventListener('click', function (e) { if (justDragged || moved && st.drag) { e.preventDefault(); e.stopPropagation(); } }, true);
 
     update(phi);

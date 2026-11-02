@@ -146,7 +146,7 @@ a:hover .arrow.up, a:focus-visible .arrow.up { transform: translateY(-4px); }
 .glass-edge { fill: none; stroke: rgba(40, 32, 20, .1); stroke-width: 2.6; }
 .oc .lift { transition: transform .5s var(--ease), filter .4s; }
 .oc:hover .lift, .oc:focus-visible .lift { transform: translateY(-6px); filter: drop-shadow(0 16px 20px rgba(40, 32, 20, .16)); }
-.oc:focus-visible { outline: none; }
+.oc:focus, .oc:focus-visible { outline: none; }  /* 浏览器默认的焦点框会框住整张人像；键盘选中改用下面的深色描边 */
 .oc:focus-visible .glass { stroke: var(--ink); stroke-width: 1.6; }
 .oc-t { font-family: var(--sans); font-weight: 700; fill: var(--ink); }
 .oc-s { font-family: var(--sans); fill: var(--sub); }
